@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <holberton.h>
 /**
  * Main - description:print Holberton
  * Description-main
@@ -16,5 +16,6 @@ int main(void)
 	_putchar("t");
 	_putchar("o");
 	_putchar("n");
+	_putchar("\n");
 	return (0);
 }
