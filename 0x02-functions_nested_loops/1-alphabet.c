@@ -1,7 +1,6 @@
 #include "holberton.h"
 /**
- * main - _putchar alphabets
- * Description: -main
+ *print_alphabets - print alphabets
  */
 
 void print_alphabet(void);
@@ -13,5 +12,4 @@ void print_alphabet(void);
 		_putchar(ch);
 	}
 	_putchar('\n');
-	return (0);
 }
