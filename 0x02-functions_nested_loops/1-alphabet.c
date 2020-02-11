@@ -3,11 +3,10 @@
  *print_alphabets - print alphabets
  */
 
-void print_alphabet(void);
+void print_alphabet(void)
 {
-	char ch = '1';
-
-	for (ch = 'a'; ch <= 'z'; ch++)
+        char ch;
+        for(ch = 'a'; ch <= 'z'; ch++)
 	{
 		_putchar(ch);
 	}
