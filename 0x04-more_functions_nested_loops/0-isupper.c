@@ -1,6 +1,3 @@
-#include "holberton.h"
-#include <stdio.h>
-
 /**
 * _isupper - check if c is uppercase.
 *
