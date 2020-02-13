@@ -6,29 +6,15 @@
  */
 
 int main(void)
+{
+long i;
+long num = 612852475143;
 
+for (i = 2; i < num; i++)
 {
-
-long int num = 612852475143;
-long int i = 2;
-long int largest;
-
-while (num != 0)
-{
-if (num % i != 0)
-{
-i += 1;	
-{ 
-else
-{
-largest = num;
+if (num % i == 0)
 num /= i;
-if (num == 1)
-{
-printf("%ld\n", largest);
-break;
 }
-}
-}
+printf("%li\n", num);
 return (0);
 }
