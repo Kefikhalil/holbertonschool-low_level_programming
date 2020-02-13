@@ -1,16 +1,17 @@
 #include "holberon.h"
 
 /**
- *print_line - function that draws a straight line in the terminal
+ * print_line - function that draws a straight line in the terminal
  *
- *@n: n parameter
- *Return: 0
+ * @n: n parameter
+ * Return: void
 */
 
 void print_line(int n)
 {
 int i;
 
+if (n > 0)
 for (i = 0; i < n; i++)
 {
 _putchar('_');
