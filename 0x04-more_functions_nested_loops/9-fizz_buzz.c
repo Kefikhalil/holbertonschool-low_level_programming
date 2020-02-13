@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * main - fizz buzz
  *
@@ -26,4 +25,3 @@ printf(" ");
 printf("\n");
 return (0);
 }
-
