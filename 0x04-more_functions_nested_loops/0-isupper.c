@@ -1,15 +1,18 @@
 #include "holberton.h"
+
 /**
-* _isupper - check if c is uppercase.
+* _isupper - check if c is uppercase
 *
-* @c: integer to check
-*Return: 1 if c is upper , else 0
+*@c: integer c
+*
+*Return: 1 if c is uppercase else 0
 */
 
-int _isupper(int c)
+int_isupper(int c)
 {
-if (c <= 65 && c <= 90)
+
+if (c >= 65 && c <= 90)
 return (1);
-else
 return (0);
 }
+
