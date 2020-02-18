@@ -1,15 +1,39 @@
+#include "holberton.h"
+
 /**
- * puts2 - prints every other character
- * @str:  pointer
+ * _strlen - return the length
+ *
+ * @s:
  * Return: 0
  */
+
+int _strlen(char *s)
+{
+int i;
+
+i = 0;
+while (s[i] != '\0')
+i++;
+return (i);
+}
+
+
+/**
+ * puts2 - prints
+ *
+ * @str:
+ * Return: 0
+ */
+
 void puts2(char *str)
 {
-int a;
-for (a = 0; str[a] != '\0'; a++)
+int i;
+
+i = 0;
+while (i < _strlen(str))
 {
-if (a % 2 == 0)
-_putchar(str[a]);
+_putchar(str[i]);
+i += 2;
 }
-_putchar('\n');
+_putchar(10);
 }                                                                                                   ~       
