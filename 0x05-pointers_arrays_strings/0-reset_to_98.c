@@ -9,9 +9,5 @@
 
 void reset_to_98(int *n)
 {
-int n;
-int *ip = 98;
-
-printf("%d\n", &*ip);
-return (0);
+n = 98;
 }
