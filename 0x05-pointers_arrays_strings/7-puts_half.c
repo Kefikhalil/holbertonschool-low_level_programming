@@ -1,11 +1,11 @@
-include "holberton.h"
+#include "holberton.h"
 
 /**
- * _strlen - returns lenght
- *
- * @s: string
+ * _strlen - lenght
+ * @s:
  * Return: 0
  */
+
 int _strlen(char *s)
 {
 int i;
@@ -16,10 +16,11 @@ i++;
 return (i);
 }
 
+
 /**
- * puts_half - prints the second half
+ * puts_half - 
  *
- * @str: string to print
+ * @str:
  * Return: 0
  */
 
