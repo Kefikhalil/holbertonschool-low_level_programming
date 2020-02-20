@@ -1,22 +1,28 @@
 #include "holberton.h"
 
 /**
- * _strcat - appends src
+ * _strcat - append strings
  * @dest: string
  * @src: string
- *
  * Return: 0
  */
 
-char *strcat(char *dest, const char *src)
+char *_strcat(char *dest, char *src)
 {
-int index = 0, dest_len = 0;
+int index;
+int dest_last_elem = 0;
 
-while (dest[index++])
-dest_len++;
+while (dest[dest_last_elem] != '\0')
+{
+dest_last_elem++;
+}
 
-for (index = 0; src[index]; index++)
-dest[dest_len++] = src[index];
+for (index = 0; src[index] != '\0'; index++, dest_last_elem++)
+{
+dest[dest_last_elem] = src[index];
+}
 
+dest[dest_last_elem] = '\0';
 return (dest);
 }
+
