@@ -8,23 +8,15 @@
  * Return: 0
  */
 
-char *_strcat(char *dest, char *src)
+char *strcat(char *dest, const char *src)
 {
-int lenDest = _strlen(dest), lenSrc = _strlen(src);
-int i;
+int index = 0, dest_len = 0;
 
-for (i = 0 ; i < lenSrc ; ++i)
-{
-dest[lenDest + i] = src[i];
-}
+while (dest[index++])
+dest_len++;
+
+for (index = 0; src[index]; index++)
+dest[dest_len++] = src[index];
+
 return (dest);
 }
-int _strlen(char *s)
-{
-int i = 0;
-
-while (s[i] != '\0')
-i++;
-return (i);
-}
-
