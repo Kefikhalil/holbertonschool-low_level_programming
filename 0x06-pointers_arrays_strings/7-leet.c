@@ -7,23 +7,16 @@
  * Return: address of s
  */
 
-char *leet(char *c)
+char *leet(char *s)
 {
-int i = 0;
-int j;
-char letter[] = "AEOTL";
-char num[] = {'4', '3', '0', '7', '1'};
-	
-while (c[i] != '\0')
+int i, j;
+char leet[] = "oOlL22eEaA5566tT";
+
+for (i = 0; *(s + i) != '\0'; i++)
 {
-for (j = 0; letter[j] != '\0'; j++)
-{
-if ((c[i] == letter[j]) || (c[i] == letter[j] + 32))
-{
-c[i] = num[j];
+for (j = 0; j < 16; j++)
+if (*(s + i) == leet[j])
+*(s + i) = j / 2 + '0';
 }
-}
-i++;
-}
-return (c);
+return (s);
 }
