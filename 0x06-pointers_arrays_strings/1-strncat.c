@@ -5,23 +5,22 @@
  * @dest: string
  * @src: string
  * @n: numnber
- *
  * Return: 0
  */
 char *_strncat(char *dest, char *src, int n)
 {
-int s2, s2;
+int index;
+int dest_size = 0;
 
-s1 = s3 = 0;
-while (*(dest + s1))
-s2++;
-while (s2 < n && *(src + s2))
+while (dest[dest_size] != '\0')
 {
-*(dest + s1) = *(src + s2);
-s1++;
-s2++;
+dest_size++;
 }
-if (s1 < s2)
-*(dest + s1) = *(src + s2);
+
+for (index = 0; (index < n) && (src[index] != '\0'); index++, dest_size++)
+{
+dest[dest_size] = src[index];
+}
+dest[dest_size] = '\0';
 return (dest);
 }
