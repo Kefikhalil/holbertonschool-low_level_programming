@@ -6,19 +6,24 @@
  *
  * Return: address of s
  */
-char *leet(char *s)
-{
-int z, x;
-char a[] = "aAeEoOtTlL";
-char b[] = "4433007711";
 
-for ( = 0; *(s + z); z++)
+char *leet(char *c)
 {
-for (x = 0; x <= 9; x++)
+int i = 0;
+int j;
+char letter[] = "AEOTL";
+char num[] = {'4', '3', '0', '7', '1'};
+	
+while (c[i] != '\0')
 {
-if (a[x] == *(s + z))
-*(s + z) = b[x];
+for (j = 0; letter[j] != '\0'; j++)
+{
+if ((c[i] == letter[j]) || (c[i] == letter[j] + 32))
+{
+c[i] = num[j];
 }
 }
-return (s);
+i++;
+}
+return (c);
 }
