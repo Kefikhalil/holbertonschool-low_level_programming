@@ -9,22 +9,18 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-
 while (*haystack)
 {
-char *begin = haystack, *subStr = needle;
-
-while (*haystack && *subStr && *haystack == *subStr)
+char *begin = haystack;
+char *pattern = needle;
+while (*haystack && *pattern && *haystack == *pattern)
 {
 haystack++;
-subStr++;
+pattern++;
 }
-
-if (!*subStr)
-return (begin);
-
+if (!(*pattern))
+return (Begin);
 haystack = begin + 1;
-
 }
-return (NULL);
+return (0);
 }
