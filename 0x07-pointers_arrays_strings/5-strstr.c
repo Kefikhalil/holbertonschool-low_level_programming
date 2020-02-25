@@ -22,5 +22,5 @@ if (!(*pattern))
 return (Begin);
 haystack = begin + 1;
 }
-return (0);
+return (NULL);
 }
