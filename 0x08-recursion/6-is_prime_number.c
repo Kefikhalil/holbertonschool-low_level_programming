@@ -8,26 +8,29 @@
  * Return: 0
  */
 
-int prime_checker(int n, int d)
+int comparar(int n, int y)
 {
-if (n % d == 0)
-return (0);
-if (d > n / 2)
-return (1);
-return (prime_checker(n, d + 1));
+int count = 0;
+
+if (y <= n)
+{
+if (n % y == 0)
+count++;
+return (count + comparar(n, y + 1));
+}
+return (count);
 }
 
 /**
- * is_prime_number - returns 1 if the input integer is a prime number
- * @n: number
- * Return: 0
+ *is_prime_number - returns 1 if input is a prime number
+ *@n: number
+ *
+ *Return: 0
  */
-
 int is_prime_number(int n)
 {
-if (n < 2)
-return (0);
-if (prime_checker(n, 2))
+if (comparar(n, 1) == 2)
 return (1);
+else
 return (0);
 }
