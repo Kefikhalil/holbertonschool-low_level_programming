@@ -20,7 +20,7 @@ if (array == NULL)
 return (NULL);
 for (y = 0; y < height; y++)
 {
-array[y] = malloc(width * sizeof(int));
+array[y] = malloc(width * sizeof(y));
 }
 return (array);
 }
