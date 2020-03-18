@@ -32,6 +32,6 @@ printf("%s", separator);
 
 }
 
-printf("\n");
 va_end(valist);
+printf("\n");
 }
