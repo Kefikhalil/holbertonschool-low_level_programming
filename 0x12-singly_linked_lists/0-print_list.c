@@ -15,8 +15,8 @@ unsigned int i;
 
 tmp = y;
 
-while (i = 0; tmp; i++)
-{	
+for (i = 0; tmp; i++)
+{
 printf("[%u] %s\n", tmp->len, tmp->str);
 tmp = tmp->next;
 }
