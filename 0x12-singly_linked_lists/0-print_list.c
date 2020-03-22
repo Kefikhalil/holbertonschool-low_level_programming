@@ -13,25 +13,25 @@
 size_t print_list(const list_t *h)
 {
 
-int n;
-size_t i = 0;
 char *c;
+int i;
+size_t n = 0;
 
-whil (h != NULL)
+while (h != NULL)
 {
 if (h->str == NULL)
 {
 c = "(nil)";
-n = 0;
+i = 0;
 }
 else
 {
 c = h->str;
-n = h->len;
+i = h->len;
 }
-printf("[%d] %s\n", n, c);
-i++;
+printf("[%d] %s\n", i, c);
+n++;
 h = h->next;
 }
-return (i);
+return (n);
 }
