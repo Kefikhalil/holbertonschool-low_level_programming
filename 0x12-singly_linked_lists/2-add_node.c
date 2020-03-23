@@ -8,15 +8,30 @@
  * Return: 0
  */
 
-list_t *add_node(list_t **head, const char *str)
+unsigned int _strlen(char *str)
 {
-int _strlen(const char *s)
-{
-int i;
+unsigned int i;
 
-for (i = 0; s[i] != 0; i++)	
-{
-}
+for (i = 0; str[i]; i++)
+;
 return (i);
 }
+{
+list_t *clone;
 
+if (str == NULL)
+return (NULL);
+clone = malloc(sizeof(list_t));
+if (clone == NULL)
+return (NULL);
+clone->str = strdup(str);
+if (clone->str == NULL)
+{
+free(clone);
+return (NULL);
+}
+clone->len = _strlen(clone->str);
+clone->next = *head;
+*head = clone;
+return (clone);
+}
