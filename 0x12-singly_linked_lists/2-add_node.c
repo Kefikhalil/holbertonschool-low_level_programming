@@ -13,7 +13,7 @@ list_t *add_node(list_t **head, const char *str)
 
 int i = 0;
 list_t *new;
-char *copy
+char *copy;
 
 while (str[i] != '\0')
 i++;
