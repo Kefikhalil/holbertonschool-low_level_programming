@@ -8,11 +8,28 @@
  * Return: 0
  */
 
-unsigned int _strlen(char *str)
+list_t *add_node(list_t **head, const char *str)
 {
-unsigned int i;
 
-for (i = 0; str[i]; i++)
-;
-return (i);
+int i = 0;
+list_t *new;
+char *copy
+
+while (str[i] != '\0')
+i++;
+new = (list_t *)malloc(sizeof(list_t));
+if (new == NULL)
+return (NULL);
+strcp = malloc(i);
+if (copy == NULL)
+{
+free(new);
+return (NULL);
+}
+copy = strdup(str);
+new->str = copy;
+new->len = i;
+new->next = *head;
+*head = new;
+return (new);
 }
