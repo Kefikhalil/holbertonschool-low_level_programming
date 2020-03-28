@@ -22,7 +22,7 @@ if (*head == NULL)
 *head = tmp;
 else
 {
-ptr = *head;
+new = *head;
 while (new->next)
 new = new->next;
 new->next = tmp;
